@@ -1,0 +1,14 @@
+{
+  "name": "perguntas_e_respostas",
+  "version": "1.0.0",
+  "description": "Plataforma de perguntas e respostas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gabriel Calaça",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
