@@ -5,7 +5,25 @@
 </head>
 
 <body>
+    <h1>PERGUNTAS</h1>
+    <hr>
+    <p>nome do gabriel <%= nome%> </p>
+    <p>que progama em <%=lang%></p>
+
+
+
+    <% if (msg==true) { %>
+        <h3 style="color:red">MENSAGEM DE ERRO</h3>
     
+    <%}else{ %>
+        <h3>nenhum erro</h3>
+    <% } %>
+    
+    <% produtos.forEach(function(produtos){ %>
+        <%= produtos.nome %>
+        <%= produtos.preco %>
+
+    <% }) %>    
 </body>
 
 
