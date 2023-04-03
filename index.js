@@ -4,6 +4,7 @@ const app = express();
 
 
 app.set('view engine','ejs'); //dizendo para o express que a view engine é o ejs
+app.use(express.static('public'));
 
 
 
@@ -11,27 +12,20 @@ app.set('view engine','ejs'); //dizendo para o express que a view engine é o ej
 
 
 
-app.get("/:nome/:lang",function(req,res){
 
-    var nome = req.params.nome;
-    var lang = req.params.lang;
-    var exibirMsg = false;
+app.get("/",function(req,res){
 
-    var produtos = [
-        {nome:"Costela",preco:30.50},
-        {nome:"linguica",preco:29.50},
-        {nome:"File",preco:20.50}
-    ];
-    
+  
 
-    res.render("index",{
-        nome: nome,
-        lang: lang,
-        msg : exibirMsg,
-        produtos: produtos
+    res.render("index");
+
+});
 
 
-    });
+
+app.get("/perguntar",function(req,res){
+    res.render("perguntar");
+
 
 });
 
