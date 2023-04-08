@@ -13,6 +13,6 @@ const Pergunta = connection.define('pergunta',{
 
 });
 
-Pergunta.sync({force:false}).then(function(){
-    console.log('tabela criada');
-});
+Pergunta.sync({force:false}).then(function(){});
+
+module.exports = Pergunta;
